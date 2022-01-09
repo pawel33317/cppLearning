@@ -1,0 +1,55 @@
+//http://www.blackwasp.co.uk/gofpatterns.aspx
+
+//wzorzec -> sposób rozwiązania problemu, który można stosować wielokrotnie
+    //ustalają nazwenictwo, narzucają terminologie, wynikają z doświadczeń, umożliwiają wielokrotne użycie
+    //w programowaniu obiektowym, standaryzują kod
+    //opisuje zależności między klasami czy obiektami
+    //posiada: 1 problem, rozwiązanie i konserwację(wzdy i zalety)
+
+//delegacja -> przekazywanie przez obiekt jakiegoś żądania wykonania operacji do innego obiektu
+
+//Podział GOF (Gang of Four)
+    //Wzorce kreacyjne     ---> do tworzenia obiektów lub grup powiązanych obiektów
+        //Abstract factory -> Doztarcza zestaw obiektów które będą określone w czasie życia programu
+        //Builder          -> do tworzenia złożonych obiektów, które muszą być tworzone w określonej kolejności lub z użyciem określonego algorytmu. Klasa zewnętrzna staruje algorytmem tworzącym.
+        //Factory Method   -> zastępuje konstruktor w celu określenia typu tworzonego obiektu w runtime
+        //Prototype        -> tworzy obiekt poprzez skopiowanie wszystkich danych z innego, stosuje się gdy konstrukcja nowego obiektu jest nieefektywna
+        //Singleton        -> zapewnia, że tylko jedna instancja danej klasy może być utworzona, każda kolejna próba tworzenia zwróci referencję do tej instancji
+    //Wzorce strukturalne  ---> Łączą obiekty lub klasy sby mogły z sobą współpracować
+        //Adapter          -> owrapowyje obiekt w celu wsparcja jakiegoś interfejsu, żeby był z nim zgodny, taka przejściówka
+            //problem: niepowiązane klasy które muszą ze sobą współpracować, niekompatybilny interfejs, brak dostępu do kodu
+            //Wzorzec interfejsów, struktura: osłona, delegacja
+            //+niezależność klient komponent, +zarządzanie komponentem, -wydajność, -trudność bo warstwa pośrednia
+        //Bridge           -> oddziela elementy abstrakcyjne od implementation details, dostarcza możliwość zamieny implementacji bez zmian w abstrakcji
+            //problem: brak odseparowania implementacji od interfejsu, potrzeba rozbudowy interfejsu i implementacji, kilka abstrakcji ma korzystać z tej samej implementacji
+            //problem: potrzeba ukrycia implementacji od klienta w celu możliwości zmiany implementacji bez zmian interfejsu
+            //Wzorzec interfejsów, struktura: osłona, delegacja
+            //+niezależnośćimplementacji i abstrakcji, +wiele implementacji do abstrakcji i odwrotnie
+
+        //Composite        -> składanie obiektów w taki sposób aby były widoczne jako pojedyńczy
+            //Wzorzec interfejsów
+        //Decorator        -> rozszerza lub zmienia funkcjonalność  obiektu w tuntime, owrapowuje obiekt, ALTERNATYWA DLA DZIEDZICZENIA
+        //Facade           -> ujednolica dostęp do bardziej złożonego systemu, dostarcza prostrzy interfejs
+            //Wzorzec interfejsów
+        //Flyweight (pyłek) -> do zredukowania zasobów, pamięci przez skomplikowane modele posiadające tysiące obiektów, naprawa poprzez współdzielenie wspólnych małych elementów
+        //Proxy (pełnomocnik) -> dostarcza obiekt zastępczy, placeholder, któy ma dostęp do obiektu bazowego. Proksy ma ten sam interfejs co obiekt bazowy jedynie dodaje
+                                 //poziom w którym odbiera żądania do obiektu bezowego i w razie potrzeby przekazuje je do rzeczywistego obiektu. W skrócie często tworzy obiekt na żądanie
+    //Wzorce behawioralne  ---> sposób komunikacji klas z obiektami
+        //Chain of responsibility -> do przetważania różnorodnych żądań, które mogą boć obsługiwane przez różne procedury czy obiekty
+        //Command          -> wyraża polecenie wraz z jego parametrami jako obiekt. Obiekt komendy może być wykonany od razu, opóźniony, logowany, modyfikowane do odbiorcy
+        //Interpreter      -> definiuje gramatykę języka i interpretera dla niej
+        //Iterator         -> dostarcza interfejs do sekwencyjnego przetwarzania kolakcji, która jest owrapowana w obiekt
+        //Mediator         -> redukuje zależności między klasami, klasy komunikują się przez obiekt mediatora, który zna ich implementacje
+        //Memento (pamiątka)-> zapamiętuje i udostępnia na zewnątrz stan obiektu dzięki czemu można przywrócić obiekt do poprzedniego stanu bez naruszenia enkapsulacji
+        //Observer         -> pozwala obiektowi publokować informacje np o jego stanie. Inne zasubskrybowane obiekty otrzymują te informacje
+        //State            -> zmiania zachowanie obiektu po zmianie jego stanu, 
+        //Strategy         -> umożliwia stworzenie rodziny algorytmów, które można wymiennie stosować wybierając w runtime
+        //Template method  -> (metoda szablonowa) definiuje podstawowe kroki algorytmu i umożliwia zmianę implementacji indywidualnych kroków
+        //Visitor          -> odseparowywuje algorytm od danych na któych operuje
+
+//Inne wzorce --> https://pl.wikipedia.org/wiki/Wzorzec_projektowy_(informatyka)
+    //Współbieżności  Active Object, Thread Specific Storage,Thread Pool Pattern, Monitor Object...
+    //Architektoniczne SOA, Client-Server, Three-tier, Pipeline...
+    //Wzorce odwzorowania O-R --> https://pl.wikipedia.org/wiki/Leniwe_inicjowanie_(wzorzec_projektowy)
+//Framweork === wzorce zaimplementowane w projekcie === rama projektowa, szkielet, wspomaga tworzenie i rozwój aplikacji
+    //Wstrzykiwanie zależności --> https://pl.wikipedia.org/wiki/Wstrzykiwanie_zale%C5%BCno%C5%9Bci
