@@ -233,6 +233,15 @@ public:
 void w_fabrykaAbstrakcyjna()
 {
     printf("-----fabrykaAbstrakcyjna-----\n");
+    DeveloperUnigrup du{};
+    DeveloperViralex dv{};
+    Nieruchomosc n1 {1, du};
+    Nieruchomosc n2 {2, du};
+    Nieruchomosc n3 {3, dv};
+    n1.show();
+    n2.show();
+    n3.show();
+
     //idea - tworzenie rodzin spokrewnionych obiektów
     //uzależnienie od abstrakcji a nie implementacji klas
 
@@ -270,13 +279,4 @@ void w_fabrykaAbstrakcyjna()
             ProductB createProductB(ProductBVersionEnum);
         }
     */
-
-    DeveloperUnigrup du{};
-    DeveloperViralex dv{};
-    Nieruchomosc n1 {1, du};
-    Nieruchomosc n2 {2, du};
-    Nieruchomosc n3 {3, dv};
-    n1.show();
-    n2.show();
-    n3.show();
 }

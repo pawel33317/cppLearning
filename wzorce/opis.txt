@@ -1,3 +1,13 @@
+Do przerobienia  Builder         Prototype
+Przerobione      Factory Method        Singleton        Abstract_Factory      
+
+Do przerobienia  Bridge      Flyweight     Proxy
+Przerobione      Adapter     Composite     Decorator     Facade
+
+Do przerobienia  Command     Interpreter     Mediator     Memento         Chain_of_Responsibility
+Przerobione      Observer    State           Strategy     Visitor      Template Method      Iterator
+
+
 //http://www.blackwasp.co.uk/gofpatterns.aspx
 
 //wzorzec -> sposób rozwiązania problemu, który można stosować wielokrotnie
